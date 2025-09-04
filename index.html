@@ -56,13 +56,20 @@
         }
 
         .buttons a {
-            display: inline-block;
+            display: inline-flex;          /* use flex to center text */
+            justify-content: center;       /* center horizontally */
+            align-items: center;           /* center vertically */
+            
+            width: 150px;                  /* fixed width */
+            height: 38px;                  /* fixed height */
+            
             background-color: #E5E5E5;
             color: #000000;
-            padding: 10px 20px;
-            margin-top: 20px;
             text-decoration: none;
-            margin: 10px; font-weight: bold;
+            /* font-weight: bold; */
+            
+            margin: 10px;                  /* spacing between buttons */
+            border-radius: 5px;            /* optional rounded corners */
         }
 
         .project-icons img {
@@ -136,9 +143,10 @@
 
 <div class="buttons">
 
-    <a href="about.html">About Me</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
+    <a href="about.html">Projects</a>
+    <a href="projects.html">Career</a>
+    <a href="contact.html">Skills</a>
+    <a href="contact.html">Pixel Art</a>
     
     <!-- Add the actual links to your pages -->
     <!-- Example:
