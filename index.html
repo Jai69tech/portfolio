@@ -104,6 +104,7 @@
             word-wrap: break-word; /* wrap long words if necessary */
             white-space: normal;   /* allow wrapping to new lines */
 
+            width: 100%;        /* let it stretch full width */
             text-align: center;      /* center the text */
             margin: 0 auto;          /* optional: center the container horizontally */
         }
@@ -166,19 +167,26 @@
 
 <div class="project-icons">
 
-    <a href="about.html">Balls</a>
+    <button onclick="toggleParagraph()">Show/Hide Section</button>
 
 </div>
 
-<div class="paragraph">
+<div class="paragraph" id="paragraph" style="display: none;">
 
-    <!-- <div class = "line"> </div>
+    <div class = "line" style="width:100%"> </div>
 
     <p>Way Out is a 2D multiplayer cooperative game that I developed with my teammates to demonstrate the joy of collaboration and shared gameplay. The game is designed to encourage players to work together to reach their goals and complete the game.</p>
     <p>Players will come across challenges and puzzles throughout the game, ensuring both players must stick together to survive.</p>
-    <p>As part of this group project, I contribute to both the design and programming aspects.</p> -->
+    <p>As part of this group project, I contribute to both the design and programming aspects.</p>
 
 </div>
+
+<script>
+function toggleParagraph() {
+    const para = document.getElementById("paragraph");
+    para.style.display = (para.style.display === "none") ? "block" : "none";
+}
+</script>
 
 </body>
 </html>
