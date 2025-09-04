@@ -66,10 +66,16 @@
             background-color: #E5E5E5;
             color: #000000;
             text-decoration: none;
-            /* font-weight: bold; */
             
             margin: 10px;                  /* spacing between buttons */
-            border-radius: 5px;            /* optional rounded corners */
+            border-radius: 0px;            /* optional rounded corners */
+            transition: all 0.3s ease;  /* smooth transition for hover */
+        }
+        .buttons a:hover {
+            background-color: #cfcfcf;      /* slightly darker */
+            border-radius: 15px;            /* smoothly curve */
+            transform: translateY(-3px);    /* lift effect */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* soft shadow */
         }
 
         .project-icons img {
@@ -134,9 +140,7 @@
 <div class = "line"> </div>
 
 <div class = "paragraph">
-
     <p>Hey there! I'm Jai, a game developer passionate about design, mechanics, storytelling, and code. I love crafting immersive worlds and fine-tuning gameplay to create experiences that stick with players.</p>
-
 </div>
 
 <div class = "line"> </div>
@@ -154,10 +158,27 @@
     -->
 </div>
 
+<div class = "line"> </div>
+
+<div class = "paragraph">
+    <p>Browse through a selection of my projects with the buttons below!</p>
+</div>
+
 <div class="project-icons">
-    <!-- Add the actual links to your projects -->
-    <!-- Example:
-    #<img src="project-icon.png" alt="v>
+
+    <a href="about.html">Balls</a>
+
+</div>
+
+<div class="paragraph">
+
+    <!-- <div class = "line"> </div>
+
+    <p>Way Out is a 2D multiplayer cooperative game that I developed with my teammates to demonstrate the joy of collaboration and shared gameplay. The game is designed to encourage players to work together to reach their goals and complete the game.</p>
+    <p>Players will come across challenges and puzzles throughout the game, ensuring both players must stick together to survive.</p>
+    <p>As part of this group project, I contribute to both the design and programming aspects.</p> -->
+
+</div>
 
 </body>
 </html>
