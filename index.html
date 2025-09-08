@@ -3,6 +3,9 @@
 <html lang="en">
 <head>
      <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Baloo+2:wght@700&family=Nunito:wght@800&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@100;400;800&display=swap" rel="stylesheet">
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jai's Portfolio</title>
@@ -66,6 +69,8 @@
             background-color: #E5E5E5;
             color: #000000;
             text-decoration: none;
+            font-family: 'Nunito', cursive;
+            font-weight: 100;
             
             margin: 10px;                  /* spacing between buttons */
             border-radius: 0px;            /* optional rounded corners */
@@ -90,6 +95,23 @@
             /* text-align: left;   align left */
             font-size: 48px;
             font-weight: bold;
+        }
+
+        .aboutme{
+            font-family: 'Baloo 2', cursive;
+            color: #FFF8EB;
+            text-shadow: 2px 2px 4px #000000;
+            font-weight: bold;
+            font-size: 19px;
+
+            max-width: 800px;   /* limit the width */
+            line-height: 2;   /* optional, makes lines more readable */
+            word-wrap: break-word; /* wrap long words if necessary */
+            white-space: normal;   /* allow wrapping to new lines */
+
+            width: 100%;        /* let it stretch full width */
+            text-align: center;      /* center the text */
+            margin: 0 auto;          /* optional: center the container horizontally */
         }
 
         .paragraph{
@@ -118,11 +140,55 @@
 
         .project-pic {
             border-radius: 0%;
-            width: 180px;
-            height: 180px;
+            width: 150px;
+            height: 150px;
             object-fit: contain; /* crop instead of stretch */
             justify-content: center;
         }
+
+        .labels-container {
+            display: flex;         /* puts label boxes side by side */
+            gap: 10px;             /* spacing between boxes */
+            flex-wrap: wrap;       /* allows wrapping on smaller screens */
+            justify-content: center; /* center the labels container */
+            gap: 25px;           /* space between boxes */
+        }
+
+        .label-box {
+            display: inline-flex;      /* make it shrink to fit its content */
+            border-radius: 8px;        /* rounded edges */
+            overflow: hidden;          /* keeps pill shape */
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 12px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .label-box div {
+            padding: 2px 12px;         /* controls box size (smaller than before) */
+            color: white;
+        }
+
+        .label-category {
+            background-color: #4a4a4a; /* gray */
+        }
+
+        .label-game {
+            background-color: #e754e7; /* pink */
+        }
+
+        .label-unity {
+            background-color: #f36b2f; /* orange like Unity */                
+        }
+
+        .label-unity {
+            background-color: #f36b2f; /* orange like Unity */                
+        }
+
+        .label-csharp {
+            background-color: #28a745; /* green */
+        }
+
 
 
 
@@ -150,7 +216,7 @@
 
 <div class = "line"> </div>
 
-<div class = "paragraph">
+<div class = "aboutme">
     <p>Hey there! I'm Jai, a game developer passionate about design, mechanics, storytelling, and code. I love crafting immersive worlds and fine-tuning gameplay to create experiences that stick with players.</p>
 </div>
 
@@ -177,18 +243,45 @@
 
 <div class="project-icons">
 
-    <button onclick="toggleParagraph()">Show/Hide Section</button>
+    <button onclick="toggleParagraph('Balls')">Balls</button>
+
+    <button onclick="toggleParagraph('DungeonRun')">Dungeon Run</button>
 
 </div>
 
-<div class="paragraph" id="paragraph" style="display: none;">
+<!-- --------------------------------------------------------------------------------------------------------------------- -->
+
+<div class="paragraph" id="Balls" style="display: none;">
 
     <div class = "line" style="width:100%"> </div>
-    
-         </div> <img src="Images\WAY HOME.avif" class="project-pic"> </div>
 
-        <div style="margin-top:20px;">
-            
+    <div><img src="Images/WAY HOME.avif" class="project-pic"></div>
+
+    <!-- Only the label here -->
+    <div class="labels-container">
+        
+        <div class="label-box">
+            <div class="label-category">Category</div>
+            <div class="label-game">Game</div>
+        </div>
+
+        <div class="label-box">
+            <div class="label-category">Engine</div>
+            <div class="label-unity">Unity</div>
+        </div>
+
+        <div class="label-box">
+            <div class="label-category">Language</div>
+            <div class="label-csharp">C#</div>
+        </div>
+        
+    </div>
+
+    <p>Way Out is a 2D multiplayer cooperative game that I developed with my teammates to demonstrate the joy of collaboration and shared gameplay. The game is designed to encourage players to work together to reach their goals and complete the game.</p>
+    <p>Players will come across challenges and puzzles throughout the game, ensuring both players must stick together to survive.</p>
+    <p>As part of this group project, I contribute to both the design and programming aspects.</p>
+
+    <div>
         <iframe width="560" height="315" 
             src="https://www.youtube.com/embed/dQw4w9WgXcQ"
             title="YouTube video player" 
@@ -196,19 +289,73 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
         </iframe>
-
     </div>
-
-    <p>Way Out is a 2D multiplayer cooperative game that I developed with my teammates to demonstrate the joy of collaboration and shared gameplay. The game is designed to encourage players to work together to reach their goals and complete the game.</p>
-    <p>Players will come across challenges and puzzles throughout the game, ensuring both players must stick together to survive.</p>
-    <p>As part of this group project, I contribute to both the design and programming aspects.</p>
 
 </div>
 
+<!----------------------------------------------------------------------------------------------------------------------- -->
+
+<div class="paragraph" id="DungeonRun" style="display: none;">
+
+    <div class = "line" style="width:100%"> </div>
+
+    <div><img src="Images/Dungeon Run.avif" class="project-pic"></div>
+
+    <!-- Only the label here -->
+    <div class="labels-container">
+        
+        <div class="label-box">
+            <div class="label-category">Category</div>
+            <div class="label-game">Game</div>
+        </div>
+
+        <div class="label-box">
+            <div class="label-category">Library</div>
+            <div class="label-unity">SFML</div>
+        </div>
+
+        <div class="label-box">
+            <div class="label-category">Language</div>
+            <div class="label-csharp">C#</div>
+        </div>
+        
+    </div>
+
+    <p>Dungeon Run is a 2D platform game developed from scratch using Microsoft Visual Studio and the SFML library.</p>
+
+    <p>During this project,I faced many challenges implementing basic mechanics like running and jumping, as I was more familiar with game engines like Unity. However, this experience helped me improve my programming skills and pushed me to grow technically.</p>
+    
+
+    <div>
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+</div>
+
+<!-- --------------------------------------------------------------------------------------------------------------------- -->
+
 <script>
-function toggleParagraph() {
-    const para = document.getElementById("paragraph");
-    para.style.display = (para.style.display === "none") ? "block" : "none";
+    function toggleParagraph(id) 
+    {
+        const para = document.getElementById(id);
+        
+        if (para.style.display === "block") {
+            // If already visible, hide it
+            para.style.display = "none";
+        } else {
+            // Hide all paragraphs first
+            const paragraphs = document.querySelectorAll(".paragraph");
+            paragraphs.forEach(p => p.style.display = "none");
+            
+            // Show only the one that was clicked
+            para.style.display = "block";
+        }
 }
 </script>
 
