@@ -58,7 +58,8 @@
             height: 24px;
         }
 
-        .buttons a {
+        .buttons a,
+        .buttons button {
             display: inline-flex;          /* use flex to center text */
             justify-content: center;       /* center horizontally */
             align-items: center;           /* center vertically */
@@ -74,9 +75,13 @@
             
             margin: 10px;                  /* spacing between buttons */
             border-radius: 0px;            /* optional rounded corners */
-            transition: all 0.3s ease;  /* smooth transition for hover */
+            transition: all 0.3s ease;    /* smooth transition for hover */
+            border: none;                  /* remove default button border */
+            cursor: pointer;               /* make it look clickable */
         }
-        .buttons a:hover {
+
+        .buttons a:hover,           
+        .buttons button:hover {
             background-color: #cfcfcf;      /* slightly darker */
             border-radius: 15px;            /* smoothly curve */
             transform: translateY(-3px);    /* lift effect */
@@ -94,6 +99,15 @@
             text-shadow: 2px 2px 4px #000000;
             /* text-align: left;   align left */
             font-size: 48px;
+            font-weight: bold;
+        }
+
+         h3 {
+            font-family: 'Fredoka One', cursive;
+            color: #FFF8EB;
+            text-shadow: 2px 2px 4px #000000;
+            /* text-align: left;   align left */
+            font-size: 30px;
             font-weight: bold;
         }
 
@@ -136,6 +150,13 @@
             background-color: #FFF8EB;  /* color */
             width: 50%;                  /* length */
             margin: 20px auto;           /* center horizontally */
+        }
+
+        .dotted-line {
+            border: none;           /* remove default border */
+            border-top: 2px dotted #FFF8EB;  /* 2px dotted line with color */
+            width: 80%;             /* length of the line */
+            margin: 20px auto;      /* center it horizontally with spacing */
         }
 
         .project-pic {
@@ -245,7 +266,9 @@
 
 <div class="buttons">
 
-    <button onclick="toggleParagraph('PixelArt')">Pixel Art</button>
+    <button onclick="toggleParagraph('Education')">Education</button>
+
+    <button onclick="toggleParagraph('Work')">Work</button>
 
 </div>
 
@@ -255,92 +278,100 @@
 
     <div class = "line" style="width:100%"> </div>
 
-    <div><img src="Images/WAY HOME.avif" class="project-pic"></div>
+    <h3>Universiti Pendidikan Sultan Idris (UPSI)</h3>
+    <h3>2017 - 2019</h3>
+    <p>Diploma in Game Design and Development | CGPA: 3.50</p>
 
-    <!-- Only the label here -->
-    <div class="labels-container">
-        
-        <div class="label-box">
-            <div class="label-category">Category</div>
-            <div class="label-game">Game</div>
-        </div>
+    <div class = "dotted-line"> </div>
 
-        <div class="label-box">
-            <div class="label-category">Engine</div>
-            <div class="label-unity">Unity</div>
-        </div>
-
-        <div class="label-box">
-            <div class="label-category">Language</div>
-            <div class="label-csharp">C#</div>
-        </div>
-        
-    </div>
-
-    <p>Way Out is a 2D multiplayer cooperative game that I developed with my teammates to demonstrate the joy of collaboration and shared gameplay. The game is designed to encourage players to work together to reach their goals and complete the game.</p>
-    <p>Players will come across challenges and puzzles throughout the game, ensuring both players must stick together to survive.</p>
-    <p>As part of this group project, I contribute to both the design and programming aspects.</p>
-
-    <div>
-        <iframe width="560" height="315" 
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
-    </div>
+    <h3>Universiti Teknikal Malaysia Melaka (UTeM)</h3>
+    <h3>2020 - 2024</h3>
+    <p>Bachelor of Information Technology (Games Technology) | CGPA: 3.61</p>
 
 </div>
 
 <!----------------------------------------------------------------------------------------------------------------------- -->
 
-<div class="paragraph" id="DungeonRun" style="display: none;">
+<div class="paragraph" id="Work" style="display: none;">
 
     <div class = "line" style="width:100%"> </div>
 
-    <div>
-        <img src="Images/Dungeon Run.avif" class = "project-pic">
-    </div>
-
-    <!-- Only the label here -->
-    <div class="labels-container">
+    <div style="text-align: left; margin: 0 auto;">
         
-        <div class="label-box">
-            <div class="label-category">Category</div>
-            <div class="label-game">Game</div>
-        </div>
+        <h3>Intern - Game Taiko (2019)</h3>
+        <p>During my internship at Game Taiko, I worked as a Level Designer and Programmer. I contributed to the development of an endless runner mobile game, assisting in both design and coding. Unfortunately, the game did not progress to the release phase, but the experience allowed me to refine my skills in game development and teamwork.</p>
 
-        <div class="label-box">
-            <div class="label-category">Library</div>
-            <div class="label-unity">SFML</div>
-        </div>
+        <div class="dotted-line" style="margin-left: 0; margin-right: auto; width: 100%;"></div>
 
-        <div class="label-box">
-            <div class="label-category">Language</div>
-            <div class="label-csharp">C#</div>
-        </div>
+        <h3>Heveapac Sdn Bhd (2019 - 2020)</h3>
+        <p>Worked as an Operator, Staff, and Clerk in the warehouse department. My responsibilities included:</p>
+
+        <ul>
+            <li><strong>Inventory Management:</strong> Accurately recorded and updated goods and container information in the database.</li>
+            <li><strong>Container Inspection:</strong> Ensured quality standards were met for outgoing shipments.</li>
+            <li><strong>Customer Complaint Handling:</strong> Responded to customer complaints professionally and efficiently.</li>
+        <li><strong>2020 QCC Project Contribution:</strong> Participated in the Quality Control Circle (QCC) Project for the Warehouse Department, improving operational efficiency.</li>
+        </ul>
+
+        <div class="dotted-line" style="margin-left: 0; margin-right: auto; width: 100%;"></div>
+
+        <h3>Seremban International Golf Club & Sendayan Golf Club (2022)</h3>
+        <p>Worked part-time as a Waiter & Kitchen Assistant while pursuing my studies. This experience strengthened my ability to:</p>
+        <ul>
+            <li>Problem-solve in fast-paced environments.</li>
+            <li>Work efficiently under tight deadlines.</li>
+            <li>Adapt and perform well in high-pressure situations.</li>
+        </ul>
         
-    </div>
+        <div class="dotted-line" style="margin-left: 0; margin-right: auto; width: 100%;"></div>
 
-    <p>Dungeon Run is a 2D platform game developed from scratch using Microsoft Visual Studio and the SFML library.</p>
+        <h3>Freelancing – Video Editing, Pixel Art & Game Development</h3>
+        <p>During my free time, I took on various freelance projects, including:</p>
+        <ul>
+            <li>Video Editing</li>
+            <li>Pixel Art Commissions: Created pixel artwork for clients.</li>
+            <li>Game Development: Designed and programmed game prototypes, strengthening my technical and creative skills.</li>
+        </ul>
 
-    <p>During this project,I faced many challenges implementing basic mechanics like running and jumping, as I was more familiar with game engines like Unity. However, this experience helped me improve my programming skills and pushed me to grow technically.</p>
-    
+        <div class="dotted-line" style="margin-left: 0; margin-right: auto; width: 100%;"></div>
 
-    <div>
-        <iframe width="560" height="315" 
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
+        <h3>Facilitator – MDEC Digital Ninja (2023)</h3>
+        <p>In 2023, I participated as a Facilitator in the MDEC Digital Ninja program, which involved 100 participants. The challenge required students to develop a game, and my role included:</p>
+        <ul>
+            <li>Guiding and mentoring participants in game development.</li>
+            <li>Providing technical and design support throughout the project.</li>
+            <li>Coordinating teams to ensure smooth collaboration.</li>
+        </ul>
+
+        <div class="dotted-line" style="margin-left: 0; margin-right: auto; width: 100%;"></div>
+
+        <h3>Intern – Nimbus Games (2023 - 2024)</h3>
+        <p>At Nimbus Games, I took on multiple roles, including:</p>
+        <ul>
+            <li>Team Lead</li>
+            <li>Game Designer</li>
+            <li>Narrative Designer</li>
+            <li>Sound Engineer</li>
+            <li>Animation and Sequence</li>
+            <li>Playtesting</li>
+        </ul>
+        <p>I played a key role in developing a game that is set to be released on Steam, gaining valuable experience in game production, team coordination, and storytelling.</p>
+
+        <div class="dotted-line" style="margin-left: 0; margin-right: auto; width: 100%;"></div>
+
+        <h3>Facilitator – MDEC Digital Ninja (2024)</h3>
+        <p>Returned as a Facilitator for the 2024 MDEC Digital Ninja program. This time, participants were tasked with designing board games. My responsibilities included:</p>
+        <ul>
+            <li>Guiding participants in the game design process.</li>
+            <li>Providing mentorship and assisting in creative problem-solving.</li>
+            <li>Coordinating teams to ensure smooth collaboration and execution.</li>
+        </ul>
+
     </div>
 
 </div>
 
-<!-- --------------------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------------------------>
 <script>
     function toggleParagraph(id) 
     {
