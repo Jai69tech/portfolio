@@ -83,9 +83,32 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* soft shadow */
         }
 
-        .project-icons img {
-            width: 50px;
-            margin-right: 15px;
+        .img-button {
+            background: transparent;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+
+            /* 🔒 fix width/height for all buttons */
+            width: 120px;   /* pick a size that fits your biggest image */
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button-grid {
+            display: flex;
+            gap: 15px;          /* spacing between buttons */
+            flex-wrap: wrap;    /* allow wrapping if screen is too small */
+            justify-content: center; /* center them horizontally */
+        }
+
+        .img-button img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* keeps aspect ratio without stretching */
+            display: block;
         }
 
         h1, h2 {
@@ -240,19 +263,58 @@
     <p>Browse through a selection of my projects with the buttons below!</p>
 </div>
 
-<div class="project-icons">
+<div class="button-grid">
 
-    <button onclick="toggleParagraph('Way Home')">Way Home</button>
+  <button class="img-button" onclick="toggleParagraph('Way Home')">
+    <img src="Images/WayHome.png"
+         onmouseover="this.src='Images/WAY HOME.png'"
+         onmouseout="this.src='Images/WayHome.png'"
+         alt="Way Home">
+  </button>
 
-    <button onclick="toggleParagraph('DungeonRun')">Dungeon Run</button>
+  <button class="img-button" onclick="toggleParagraph('DungeonRun')">
+    <img src="Images/DungeonRun.png"
+         onmouseover="this.src='Images/DungeonRunText.png'"
+         onmouseout="this.src='Images/DungeonRun.png'"
+         alt="Dungeon Run">
+  </button>
 
-    <button onclick="toggleParagraph('Balls')">Balls</button>
+  <button class="img-button" onclick="toggleParagraph('Balls')">
+    <img src="Images/Balls.png"
+         onmouseover="this.src='Images/BallsText.png'"
+         onmouseout="this.src='Images/Balls.png'"
+         alt="Balls">
+  </button>
 
-    <button onclick="toggleParagraph('Marathon Soldier')">Marathon Soldier</button>
+  <button class="img-button" onclick="toggleParagraph('Marathon Soldier')">
+    <img src="Images/MarathonSoldier.png"
+         onmouseover="this.src='Images/MarathonSoldierText.png'"
+         onmouseout="this.src='Images/MarathonSoldier.png'"
+         alt="Marathon Soldier">
+  </button>
 
-    <button onclick="toggleParagraph('Fiverr Project')">Fiver Project</button>
+  <button class="img-button" onclick="toggleParagraph('Fiverr Project')">
+    <img src="Images/FiverrProject.png"
+         onmouseover="this.src='Images/FiverrProjectText.png'"
+         onmouseout="this.src='Images/FiverrProject.png'"
+         alt="Fiverr Project">
+  </button>
 
-    <button onclick="toggleParagraph('Johnnys Rampage')">Johnny’s Rampage</button>
+  
+
+  <button class="img-button" onclick="toggleParagraph('Tuah Dungoen')">
+    <img src="Images/TuahDungoen.png"
+         onmouseover="this.src='Images/TuahDungoenText.png'"
+         onmouseout="this.src='Images/TuahDungoen.png'"
+         alt="Tuah Dungoen">
+  </button>
+
+  <button class="img-button" onclick="toggleParagraph('Johnnys Rampage')">
+    <img src="Images/JohnnysRampage.png"
+         onmouseover="this.src='Images/JohnnysRampageText.png'"
+         onmouseout="this.src='Images/JohnnysRampage.png'"
+         alt="Johnny's Rampage">
+  </button>
 
     <button onclick="toggleParagraph('Pagan')">Pagan</button>
 
