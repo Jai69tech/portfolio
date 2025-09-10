@@ -89,12 +89,36 @@
             padding: 0;
             cursor: pointer;
 
-            /* 🔒 fix width/height for all buttons */
-            width: 120px;   /* pick a size that fits your biggest image */
+            width: 120px;
             height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
+
+            position: relative; /* needed for stacking images */
+            overflow: hidden;
+        }
+
+        .img-button img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: opacity 0.4s ease; /* smooth fade */
+        }
+
+        .img-button img.hover {
+            opacity: 0; /* hidden by default */
+        }
+
+        .img-button:hover img.hover {
+            opacity: 1; /* fade in */
+        }
+
+        .img-button:hover img.normal {
+            opacity: 0; /* fade out */
         }
 
         .button-grid {
@@ -102,13 +126,6 @@
             gap: 15px;          /* spacing between buttons */
             flex-wrap: wrap;    /* allow wrapping if screen is too small */
             justify-content: center; /* center them horizontally */
-        }
-
-        .img-button img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain; /* keeps aspect ratio without stretching */
-            display: block;
         }
 
         h1, h2 {
@@ -266,57 +283,44 @@
 <div class="button-grid">
 
   <button class="img-button" onclick="toggleParagraph('Way Home')">
-    <img src="Images/WayHome.png"
-         onmouseover="this.src='Images/WAY HOME.png'"
-         onmouseout="this.src='Images/WayHome.png'"
-         alt="Way Home">
+    <img class="normal" src="Images/WayHome.png" alt="Way Home">
+    <img class="hover" src="Images/WAY HOME.png" alt="Way Home Hover">
   </button>
 
   <button class="img-button" onclick="toggleParagraph('DungeonRun')">
-    <img src="Images/DungeonRun.png"
-         onmouseover="this.src='Images/DungeonRunText.png'"
-         onmouseout="this.src='Images/DungeonRun.png'"
-         alt="Dungeon Run">
+    <img class="normal" src="Images/DungeonRun.png" alt="Dungeon Run">
+    <img class="hover" src="Images/DungoenRunText.png" alt="Dungeon Run Hover">
   </button>
 
   <button class="img-button" onclick="toggleParagraph('Balls')">
-    <img src="Images/Balls.png"
-         onmouseover="this.src='Images/BallsText.png'"
-         onmouseout="this.src='Images/Balls.png'"
-         alt="Balls">
+    <img class="normal" src="Images/Balls.png" alt="Balls">
+    <img class="hover" src="Images/BallsText.png" alt="Balls Hover">
   </button>
 
   <button class="img-button" onclick="toggleParagraph('Marathon Soldier')">
-    <img src="Images/MarathonSoldier.png"
-         onmouseover="this.src='Images/MarathonSoldierText.png'"
-         onmouseout="this.src='Images/MarathonSoldier.png'"
-         alt="Marathon Soldier">
-  </button>
+  <img class="normal" src="Images/MarathonSoldier.png" alt="Marathon Soldier">
+  <img class="hover" src="Images/MarathonSoldierText.png" alt="Marathon Soldier Hover">
+</button>
 
-  <button class="img-button" onclick="toggleParagraph('Fiverr Project')">
-    <img src="Images/FiverrProject.png"
-         onmouseover="this.src='Images/FiverrProjectText.png'"
-         onmouseout="this.src='Images/FiverrProject.png'"
-         alt="Fiverr Project">
-  </button>
+<button class="img-button" onclick="toggleParagraph('Fiverr Project')">
+  <img class="normal" src="Images/FiverrProject.png" alt="Fiverr Project">
+  <img class="hover" src="Images/FiverrProjectText.png" alt="Fiverr Project Hover">
+</button>
 
-  
+<button class="img-button" onclick="toggleParagraph('Tuah Dungoen')">
+  <img class="normal" src="Images/TuahDungoen.png" alt="Tuah Dungoen">
+  <img class="hover" src="Images/TuahDungoenText.png" alt="Tuah Dungoen Hover">
+</button>
 
-  <button class="img-button" onclick="toggleParagraph('Tuah Dungoen')">
-    <img src="Images/TuahDungoen.png"
-         onmouseover="this.src='Images/TuahDungoenText.png'"
-         onmouseout="this.src='Images/TuahDungoen.png'"
-         alt="Tuah Dungoen">
-  </button>
+<button class="img-button" onclick="toggleParagraph('Johnnys Rampage')">
+  <img class="normal" src="Images/JohnnysRampage.png" alt="Johnny's Rampage">
+  <img class="hover" src="Images/JohnnysRampageText.png" alt="Johnny's Rampage Hover">
+</button>
 
-  <button class="img-button" onclick="toggleParagraph('Johnnys Rampage')">
-    <img src="Images/JohnnysRampage.png"
-         onmouseover="this.src='Images/JohnnysRampageText.png'"
-         onmouseout="this.src='Images/JohnnysRampage.png'"
-         alt="Johnny's Rampage">
-  </button>
-
-    <button onclick="toggleParagraph('Pagan')">Pagan</button>
+<button class="img-button" onclick="toggleParagraph('Pagan')">
+  <img class="normal" src="Images/Pagan.png" alt="Pagan">
+  <img class="hover" src="Images/PaganText.png" alt="Pagan Hover">
+</button>
 
 </div>
 
@@ -502,7 +506,7 @@
     <div class = "line" style="width:100%"> </div>
 
     <div>
-        <img src="Images/Tuah Dungoen.avif" class = "project-pic">
+        <img src="Images/Tuah Dungeon.avif" class = "project-pic">
     </div>
 
     <!-- Only the label here -->
