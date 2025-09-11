@@ -218,13 +218,55 @@
             background-color: #28a745; /* green */
         }
 
-        /* .gallery video, .gallery img {
-            width: 200px;
+        html, body { height: 100%; margin: 0; padding: 0; }
+
+        /* gallery wrapper */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;            /* allow rows */
+            justify-content: center;    /* <-- centers items horizontally */
+            gap: 15px;                  /* space between items */
+            padding: 20px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        /* optional: keep gallery limited width and centered on page */
+            .gallery-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* make anchors behave nicely */
+        .gallery a {
+            display: block;             /* anchors become block-level (flex items of .gallery) */
+            text-decoration: none;
+        }
+
+        /* the media */
+            .gallery video,
+            .gallery img {
+            display: block;             /* remove inline gaps */
+            width: 200px;               /* control size in CSS (not HTML attrs) */
             height: 150px;
             object-fit: cover;
             border-radius: 8px;
             cursor: pointer;
-        } */
+        }
+
+            .gallery .line {
+            flex-basis: 80%;  /* makes it span entire row */
+            height: 2px;       /* adjust thickness if you like */
+            background-color: #FFF8EB;
+            margin: 20px 0;    /* vertical spacing */
+        }
+
+        /* If some other CSS is stubborn, this will force it (use only if needed) */
+        /* .gallery { justify-content: center !important; } */
+        /* .gallery video, .gallery img { width:200px !important; height:150px !important; } */
+
+        /* If you have that <div class="line"> inside the gallery, make sure it doesn't break layout */
+        /* .gallery .line { width: 100%; height: 0; } or remove the element if not needed */
 
     </style>
 </head>
@@ -276,24 +318,113 @@
     <p>( Blame me for any wonky pixels. )</p>
 </div>
 
-<div class="gallery">
-    <div class = "line"> </div>
+<div class="gallery-container">
+    <div class="gallery">
 
-  <!-- Image -->
-  <a data-fancybox="gallery" href="Pixel Arts/my life.gif">
-    <img src="Pixel Arts/my life.gif" width="200">
-  </a>
+        <div class = "line"> </div>
 
-  <!-- Another Image -->
-  <a data-fancybox="gallery" href="Pixel Arts/sample2.png">
-    <img src="Pixel Arts/sample2.png" width="200">
-  </a>
+            <!-- Video -->
+        <a data-fancybox="gallery" href="Pixel Arts/AmongUS.mov">
+            <video autoplay muted loop playsinline width="250"><source src="Pixel Arts/AmongUS.mov" type="video/mp4">Your browser does not support the video tag.</video>
+        </a>
 
-  <!-- Video -->
-  <a data-fancybox="gallery" href="Pixel Arts/sample3.mp4">
-    <video autoplay muted loop playsinline width="250"><source src="Pixel Arts/sample3.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-  </a>
+        <!-- Image -->
+        <a data-fancybox="gallery" href="Pixel Arts/Aqil.png">
+            <img src="Pixel Arts/Aqil.png" width="200">
+        </a>
 
+        <!-- Another Image -->
+        <a data-fancybox="gallery" href="Pixel Arts/Arthur.jpg">
+            <img src="Pixel Arts/Arthur.jpg" width="200">
+        </a>
+
+        <!-- Another Image -->
+        <a data-fancybox="gallery" href="Pixel Arts/Asna.jpg">
+            <img src="Pixel Arts/Asna.jpg" width="200">
+        </a>
+
+        <!-- Video -->
+        <a data-fancybox="gallery" href="Pixel Arts/Ayie.gif">
+            <video autoplay muted loop playsinline width="250"><source src="Pixel Arts/Ayie.gif" type="video/mp4">Your browser does not support the video tag.</video>
+        </a>
+
+        <!-- Another Image -->
+        <a data-fancybox="gallery" href="Pixel Arts/Banner.jpg">
+            <img src="Pixel Arts/Banner.jpg" width="200">
+        </a>
+
+        <!-- Another Image -->
+        <a data-fancybox="gallery" href="Pixel Arts/Daus.png">
+            <img src="Pixel Arts/Daus.png" width="200">
+        </a>
+
+        <!-- Another Image -->
+        <a data-fancybox="gallery" href="Pixel Arts/Firewatch.png">
+            <img src="Pixel Arts/Firewatch.png" width="200">
+        </a>
+
+        <!-- Another Image -->
+        <a data-fancybox="gallery" href="Pixel Arts/Fiverr.jpg">
+            <img src="Pixel Arts/Fiverr.jpg" width="200">
+        </a>
+
+        <!-- Another Image -->
+        <a data-fancybox="gallery" href="Pixel Arts/Gampang.jpg">
+            <img src="Pixel Arts/Gampang.jpg" width="200">
+        </a>
+
+        <!-- Another Image -->
+        <a data-fancybox="gallery" href="Pixel Arts/Green Transformer.png">
+            <img src="Pixel Arts/Green Transformer.png" width="200">
+        </a>
+
+        <!-- Another Image -->
+        <a data-fancybox="gallery" href="Pixel Arts/Hapy New Year.jpeg">
+            <img src="Pixel Arts/Hapy New Year.jpeg" width="200">
+        </a>
+
+        <!-- Another Image -->
+        <a data-fancybox="gallery" href="Pixel Arts/Hapy New Year.jpeg">
+            <img src="Pixel Arts/Hapy New Year.jpeg" width="200">
+        </a>
+
+        <!-- Another Image -->
+        <a data-fancybox="gallery" href="Pixel Arts/Hapy New Year.jpeg">
+            <img src="Pixel Arts/Hapy New Year.jpeg" width="200">
+        </a>
+
+        <!-- Another Image -->
+        <a data-fancybox="gallery" href="Pixel Arts/Hapy New Year.jpeg">
+            <img src="Pixel Arts/Hapy New Year.jpeg" width="200">
+        </a>
+
+        <!-- Another Image -->
+        <a data-fancybox="gallery" href="Pixel Arts/Hapy New Year.jpeg">
+            <img src="Pixel Arts/Hapy New Year.jpeg" width="200">
+        </a>
+
+        <!-- Another Image -->
+        <a data-fancybox="gallery" href="Pixel Arts/Hapy New Year.jpeg">
+            <img src="Pixel Arts/Hapy New Year.jpeg" width="200">
+        </a>
+
+        <!-- Another Image -->
+        <a data-fancybox="gallery" href="Pixel Arts/Hapy New Year.jpeg">
+            <img src="Pixel Arts/Hapy New Year.jpeg" width="200">
+        </a>
+
+        <!-- Another Image -->
+        <a data-fancybox="gallery" href="Pixel Arts/Hapy New Year.jpeg">
+            <img src="Pixel Arts/Hapy New Year.jpeg" width="200">
+        </a>
+
+        <!-- Video -->
+        <a data-fancybox="gallery" href="Pixel Arts/sample3.mp4">
+            <video autoplay muted loop playsinline width="250"><source src="Pixel Arts/sample3.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+        </a>
+
+
+    </div>
 </div>
 
 <!-- ------------------------------------------------------------------------------------------------------------------------>
